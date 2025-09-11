@@ -4,7 +4,7 @@ This repository contains the files for my personal website to present my skills,
 The site is live on GitHub Pages and includes a skills section and a gallery of apps in development.
 
 - Visit [victor-a-p.github.io/MyPortafolio](https://victor-a-p.github.io/MyPortafolio/) to view the live portfolio.
-- 
+  
 ---
 
 ## Table of Contents
