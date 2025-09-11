@@ -37,6 +37,7 @@ The site is live on GitHub Pages and includes a skills section and a gallery of 
 - JavaScript (vanilla) for smooth scrolling to sections.
 - Google Fonts (Montserrat).
 - GitHub Pages for hosting and automatic deployment.
+- DocC documentation it's used for the static page of the apps
 
 
 ## Project Structure
