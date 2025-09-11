@@ -14,7 +14,7 @@
 
 :root {
     --primary: #583EBD;
-    --bg: #181721;
+    --bg: #353535;
     --text: #F4F4F6;
     --button-text: #a259ff;
     --button-hover-bg: #a259ff;
@@ -29,528 +29,87 @@ html
 
 body
 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
+    margin: 0;
+    padding: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: var(--bg);
+    background: linear-gradient(45deg, var(--bg), #353535);
     color: var(--text);
+
 }
 
-.app-container-mb
+
+
+.app-container-mb 
 {
-    display: none;
-}
-
-#aboutMe,
-#app1,
-#app2,
-#app3 {
-    scroll-margin-top: 35vh;
-    /* Ajusta según tu layout */
-}
-
-.contenedorGrid 
-{
-    position: fixed;
-    top: 5dvh;
-    left: 10vw;
-    z-index: 1;
 
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-
-    height: 95dvh;
-    width: 90vw;
-    margin: auto;
-
-
-
-    .section1 
-    {
-        position: absolute;
-        top: 0;
-        left: 3%;
-
-        width: 90%;
-        max-width: 33.2vw;
-        height: 90vh;
-
-        display: flex;
-        justify-content: center;
-
-        align-items: center;
-        gap: 10px;
-
-        margin-inline: auto;
-
-
-
-        .intro 
-        {
-            position: absolute;
-            top: 0;
-
-
-            width: 90%;
-            max-width: 33.2vw;
-            max-height: 8.943vh;
-
-            h2 {
-                color: aliceblue;
-                text-align: center;
-                font-size: clamp(25px, 2vw, 3vw);
-            }
-
-        }
-
-        .profile 
-        {
-            position: absolute;
-            top: 10.16%;
-
-
-            width: 95%;
-            max-width: 33.2vw;
-            max-height: 51.544vh;
-            aspect-ratio: 0.828;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: auto;
-
-
-            .pfPicture 
-            {
-                width: 60%;
-                height: 90%;
-                object-fit: cover;
-                border-radius: 15px;
-
-                /* Máscara SVG */
-
-                mask-image: url("images/App_der.png");
-                mask-size: contain;
-                mask-repeat: no-repeat;
-                mask-position: center;
-            }
-
-            .githubButton 
-            {
-                z-index: 2;
-                position: absolute;
-                right: 20%;
-                bottom: 4%;
-                max-width: 6vw;
-                width: 95%;
-                max-height: 15.2vh;
-                aspect-ratio: 1 / 1;
-                border-radius: 50%;
-                background-color:var(--primary);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                transition: 1s;
-
-            }
-
-            .githubButton:hover 
-            {
-                background-color: var(--button-hover-bg);
-            }
-
-        }
-
-        .skills 
-        {
-            position: absolute;
-            bottom: 0;
-
-
-            background-color: var(--primary);
-            width: 90%;
-            max-width: 400px;
-            height: 26.42vh;
-            border-radius: 2vh;
-            aspect-ratio: 1.8;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            
-            text-decoration: none;
-            color: var(--text);
-            font-family:'Montserrat', Arial, sans-serif;
-            font-size: large;
-            font-weight: 600;
-            
-        }
-    }
-
-
-
-    .figYellow 
-    {
-        z-index: 5;
-        pointer-events: none;
-        position: absolute;
-        top: 3vh;
-        left: 26.5vw;
-        width: 90%;
-        height: 42vh;
-        max-width: 31vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 0.828;
-
-
-
-        .app1 
-        {
-            pointer-events: auto;
-            width: 60%;
-            height: 90%;
-            object-fit: cover;
-            border-radius: 15px;
-
-            /* Máscara SVG */
-
-            mask-image: url("images/div4.png");
-            mask-size: contain;
-            mask-repeat: no-repeat;
-            mask-position: center;
-            transition: 1s;
-        }
-
-       
-    }
-
-    .figPurple 
-    {
-        z-index: 5;
-        pointer-events: none;
-        position: absolute;
-        bottom: 0dvh;
-        left: 22vw;
-        width: 69vw;
-        height: 53dvh;
-        aspect-ratio: 1.86;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .app2 
-        {
-            pointer-events: auto;
-            width: 60%;
-            height: 90%;
-            object-fit:contain;
-            border-radius: 15px;
-
-            /* Máscara SVG */
-
-            mask-image: url("images/div5.png");
-            mask-size: contain;
-            mask-repeat: no-repeat;
-            mask-position: center;
-
-            transition: 1s;
-        }
-
-        
-    }
-
-
-    .figRed 
-    {
-        z-index: 3;
-        pointer-events: none;
-        position: absolute;
-        top: 0%;
-        right: 8vw;
-        width: 100%;
-        height: 67.07vh;
-        max-width: 47.70vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        aspect-ratio: 0.828;
-
-        .app3 
-        {
-            pointer-events: auto;
-            width: 60%;
-            height: 90%;
-            object-fit: scale-down;
-            border-radius: 15px;
-
-            /* Máscara SVG */
-
-            mask-image: url("images/div6.png");
-            mask-size: contain;
-            mask-repeat: no-repeat;
-            mask-position: center;
-            transition: 1s;
-        }
-
-      
-
-    }
-
-
-
-
-    .cvDownload 
-    {
-        position: absolute;
-
-        top: 2vw;
-        right: 17vw;
-        background-color: var(--primary);
-
-        width: 90%;
-        max-width: 9vw;
-        max-height: 20.325vh;
-        aspect-ratio: 1 / 1;
-        border-radius: 2vw;
-
-        transition: 1s;
-
-        display: flex;
-        justify-content: center;
-            align-items: center;
-
-    }
-
-    .cvDownload:hover {
-        background-color: var(--button-hover-bg);
-    }
-
-
-}
- 
- .spacer 
- {
-     width: 99vw;
-     height: 100vh;
-     background: transparent;
- }
-
- .abautMe-div
- {
-    z-index: 3;
-    width: 99vw;
-    height: 150dvh;
-    background: rgba(30, 30, 30, 0.99);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    animation: appear 1s linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
-
-
-    .conte-AboutMe 
-    {
-        z-index: 4;
-        width: 80%;
-        height: 70vh;
-        margin: auto;
-        background-color: aliceblue;
-        border-radius: 50px;
-        color: #353535;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        box-shadow: 0 32px 32px rgba(0, 0, 0, 0.15);
-        
-        animation: appear 4s linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+    align-items: center; 
+    justify-content: center;  
+    padding: 24px 16px;
+    
+    margin: 0 auto;
+    gap: 24px;
     
 
-        .aboutMe-info 
-        {
-            position: relative;
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
 
-            h3 {
-                font-size: 44px;
-                font-weight: 700;
-                max-width: 70ch;
-                margin-bottom: 20px;
-            }
-
-            p {
-                color: #353535;
-                margin-inline: 20px;
-                font-size: 24px;
-                font-weight: 500;
-                max-width: 60ch;
-                line-height: 1.3;
-            }
-        }
-
-        .aboutMe-display 
-        {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            gap: 40px;
-
-            .rect1,
-            .rect4 {
-                position: absolute;
-                min-width: 100px;
-                width: 50%;
-                min-height: 105px;
-                border-radius: 15px;
-                text-align: center;
-                margin: auto;
-                background-color: #583EBD;
-            }
-
-            .rect2,
-            .rect3 {
-                position: absolute;
-                min-width: 100px;
-                width: 39%;
-                min-height: 45%;
-                border-radius: 15px;
-                text-align: center;
-                margin: auto;
-                background-color: #583EBD;
-            }
-
-            .rect1 {
-
-                top: 15%;
-                left: 0;
-            }
-
-            .rect2 {
-
-                top: 15%;
-                right: 10%;
-            }
-
-
-            .rect3 {
-                bottom: 18%;
-                left: 11%;
-            }
-
-            .rect4 {
-
-                bottom: 18%;
-                right: -5px;
-            }
-        }
-    }
-
-    #aboutMe-anchor 
+    .profile-section 
     {
-        position: absolute;
-        top: 50%;
-        left: 0;
         width: 100%;
-        height: 1px;
-        pointer-events: none;
-    }
- }
-
-.apps
-{
-    z-index: 3;
-    width: 99vw;
-    height: 150dvh;
-    background: rgba(30, 30, 30, 0.99);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    animation: appear 1s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-
-
-    .conte-div 
-    {
-        width: 80%;
-        height: 70dvh;
-        margin: auto;
-        margin-top: 10dvh;
-        margin-bottom: 10dvh;
-        background-color: aliceblue;
-        border-radius: 50px;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
         align-items: center;
-        overflow: hidden;
-        box-shadow: 0 32px 32px rgba(0, 0, 0, 0.15);
+        gap: 24px;
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto 32px auto;
+        
 
-        animation: appear 5s linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        .greeting 
+        {
+            font-size: min(3vw, 40px);
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            max-width: 220px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-
-
-        .div-img 
+        .svg-profilePic 
         {
             position: relative;
-            width: 50%;
+            /* 1. Hace que los hijos absolutos se posicionen respecto a este contenedor */
+            width: 220px;
+            /* 2. Tamaño fijo o relativo para la imagen */
+            height: 180px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: auto;
 
-            img 
+
+            .profile-image 
             {
-                max-height: 400px;
+                width: 100%;
+                max-width: 220px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
                 object-fit: cover;
-
-
-                mask-image: url("images/App_der.png");
-                mask-size: contain;
-                mask-repeat: no-repeat;
-                mask-position: center;
-                transition: 1s;
             }
 
-            .ref-button 
+            .profile-git-button 
             {
                 position: absolute;
                 /* 3. Permite ubicar el botón sobre la imagen */
-                bottom: 3px;
+                bottom: -48px;
                 /* 4. Separa el botón del borde inferior */
-                left: 57%;
-                background-color: #583EBD;
+                right: 0px;
+                /* 5. Separa el botón del borde derecho */
+                background: var(--primary);
                 border-radius: 50%;
-                width: 90px;
-                height: 90px;
+                width: 70px;
+                height: 70px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -561,1720 +120,402 @@ body
                 text-decoration: none;
             }
 
-            .ref-button:hover 
+            .profile-git-button:hover 
             {
-                background-color: #a259ff;
+                background-color: var(--button-hover-bg);
             }
-
         }
 
-        .div-texto 
+    }
+
+    .parent 
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 2fr 2fr 1fr 2fr;
+        width: 90%;
+        margin: auto;
+        
+        .div1 
         {
-            width: 50%;
-            margin: auto;
-            padding-right: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: left;
+            grid-column: span 2 / span 2;
+            
+            
+            min-height: 55px;
+            height: 95%;
 
+            min-width: 280px;
+            width: 90%;
+            margin-inline: auto;
 
-            .titulo 
-            {
-                font-size: 44px;
-                font-weight: 800;
-            }
-
-            .conte-info 
-            {
-                margin-top: 30px;
-                font-size: 22px;
-                color: #444;
-                line-height: 1.6;
-                max-width: 50ch;
-            }
-        }
-    }
-}
- 
-
-@keyframes appear
-{
-   from
-   {
-    opacity: 0;
-    scale: 0.3;
-   } 
-
-   to
-   {
-    opacity: 1;
-    scale: 1;
-   }
-}
-
-@keyframes disappear
-{
-    from 
-    {
-        opacity: 1;
-        scale: 1;
-    }
-
-    to 
-    {
-        opacity: 0;
-        scale: 0.4;
-    }
-}
-
-@media screen and (max-width:672px)
-{
-    .app-container-mb
-    {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contenedorGrid,
-    .spacer,
-    .abautMe-div,
-    .apps
-    {
-        display: none;
-    }
-
-
-        .app-container-mb 
-        {
-    
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            /* Centra horizontalmente */
-            justify-content: center;
-            /* Centra verticalmente */
-            padding: 24px 16px;
-            max-width: 480px;
-            margin: 0 auto;
-            gap: 24px;
-    
-    
-            .profile-section 
-            {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 24px;
-                width: 100%;
-                max-width: 480px;
-                margin: 0 auto 32px auto;
-                background-color: var(--bg);
-    
-                .greeting 
-                {
-                    font-size: 1.2rem;
-                    font-weight: 600;
-                    text-align: center;
-                    width: 100%;
-                    max-width: 220px;
-                    text-align: center;
-                    margin-bottom: 40px;
-                }
-    
-                .svg-profilePic 
-                {
-                    position: relative;
-                    /* 1. Hace que los hijos absolutos se posicionen respecto a este contenedor */
-                    width: 220px;
-                    /* 2. Tamaño fijo o relativo para la imagen */
-                    height: 180px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-    
-    
-                    .profile-image 
-                    {
-                        width: 100%;
-                        max-width: 220px;
-                        height: auto;
-                        display: block;
-                        margin: 0 auto;
-                        object-fit: cover;
-                    }
-    
-                    .profile-git-button 
-                    {
-                        position: absolute;
-                        /* 3. Permite ubicar el botón sobre la imagen */
-                        bottom: -48px;
-                        /* 4. Separa el botón del borde inferior */
-                        right: 0px;
-                        /* 5. Separa el botón del borde derecho */
-                        background: var(--primary);
-                        border-radius: 50%;
-                        width: 70px;
-                        height: 70px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border: none;
-                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-                        transition: background 0.2s;
-                        z-index: 2;
-                        text-decoration: none;
-                    }
-    
-                    .profile-git-button:hover 
-                    {
-                        background-color: var(--button-hover-bg);
-                    }
-                }
-    
-            }
-    
-            .parent 
-            {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                grid-template-rows: 2fr 2fr 1fr 2fr;
-               
-                max-width: 700px;
-                width: 97%;
-                margin: auto;
-    
-                .div1 
-                {
-                    grid-column: span 2 / span 2;
-                   
-                   
-                    min-height: 55px;
-                    height: 95%;
-
-                    min-width: 300px;
-                    width: 100%;
-                    
-
-                    color: var(--text);
-                    background-color: var(--primary);
-                    border-radius: 15px;
-                    text-align: left;
-                    align-content: center;
-    
-                    p 
-                    {
-                        max-width: 85%;
-                        font-size:clamp(12px,15px,2rem);
-                       
-                        margin-inline: auto;
-                        margin-top: 10px ;
-                        margin-bottom: 20px;
-
-                    }
-
-                    
-                }
-    
-                .div2 
-                {
-                    grid-row-start: 2;
-                    margin: auto;
-
-                    min-height: 55px;
-                    height: 95%;
-
-                    min-width: 110px;
-                    width: 100%;
-                    max-width: 100%;
-
-                    background-color: var(--primary);
-                    border-radius: 15px;
-
-                    border-radius: 15px;
-                    text-align: center;
-                    align-content: center;
-    
-                    p 
-                    {
-                        max-width: 85%;
-                        font-size: clamp(10px, 12px, 2rem);
-                    
-                        margin-inline: auto;
-                        margin-top: 10px;
-                        margin-bottom: 20px;
-                    }
-
-                    .mainDivInfo 
-                    {
-                        text-align: left;
-                    }
-    
-                    .listado-lenguajes {
-                        text-align: left;
-                    }
-    
-                }
-    
-                .div3 
-                {
-                    grid-row-start: 3;
-                    margin: auto;
-
-                    min-height: 55px;
-                    max-width: 97%;
-                    background-color: var(--primary);
-                    border-radius: 15px;
-                    text-align: center;
-                    align-items: center;
-    
-                    img {
-                        margin-top: 30px;
-                        width: 100%;
-                    }
-                }
-    
-                .div4 
-                {
-                    grid-row-start: 3;
-                    margin: auto;
-    
-                    
-                    min-height: 55px;
-                    max-width: 97%;
-                    background-color: var(--primary);
-                    border-radius: 15px;
-                    text-align: center;
-                    justify-content: center;
-    
-    
-                    img {
-                        margin-top: 35px;
-                        width: 97%;
-    
-                    }
-                }
-    
-                .div5 
-                {
-    
-                    grid-column-start: 2;
-                    grid-row-start: 4;
-                    margin: auto;
-
-                    min-height: 55px;
-                    height: 95%;
-                
-                    min-width: 110px;
-                    width: 100%;
-                    max-width: 100%;
-
-                    background-color: var(--primary);
-                    border-radius: 15px;
-                    text-align: center;
-    
-                    align-items: center;
-    
-                    p {
-                        font-size: 12px;
-                        margin: 15px;
-                        text-align: center;
-                    }
-
-                    .mainDivInfo
-                    {
-                        text-align: left;
-                    }
-    
-                    .listado-lenguajes {
-                        text-align: left;
-                    }
-                }
-            }
-    
-            .dev-Apps 
-            {
-                margin-top: 70px;
-    
-    
-                .app1,
-                .app3 {
-                    position: relative;
-                    width: 300px;
-                    height: 180px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-    
-                    .image-App1,
-                    .image-App3 {
-                        width: 100%;
-                        max-width: 320px;
-                        height: auto;
-                        display: block;
-                        margin: 0 auto;
-                        object-fit: cover;
-
-                        mask-image: url("images/App_izq.png");
-                            mask-size: contain;
-                            mask-repeat: no-repeat;
-                            mask-position: center;
-                            transition: 1s;
-                    }
-    
-                    .button-arrow1,
-                    .button-arrow3 {
-                        position: absolute;
-                        bottom: -95px;
-                        left: 7px;
-    
-                    }
-                }
-    
-                .app2 {
-                    position: relative;
-                    width: 300px;
-                    height: 180px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-    
-                    .image-App2 {
-                        width: 100%;
-                        max-width: 320px;
-                        height: auto;
-                        display: block;
-                        margin: 0 auto;
-                        object-fit: cover;
-
-                        mask-image: url("images/App_der.png");
-                            mask-size: contain;
-                            mask-repeat: no-repeat;
-                            mask-position: center;
-                            transition: 1s;
-                    }
-    
-                    .button-arrow2 {
-                        position: absolute;
-                        bottom: -95px;
-                        right: 7px;
-    
-                    }
-                }
-            }
-    
-    
-    
-        }
-    
-        .button-arrow1,
-        .button-arrow2,
-        .button-arrow3 {
-            background: var(--primary);
-            border-radius: 50%;
-            width: 90px;
-            height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-            transition: background 0.2s;
-            z-index: 2;
-            text-decoration: none;
-        }
-    
-        .button-arrow1:hover,
-        .button-arrow2:hover,
-        .button-arrow3:hover {
-            background-color: var(--button-hover-bg);
-        }
-    
-        .cv-download {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            max-width: 220px;
-            max-height: 55px;
+            color: var(--text);
             background-color: var(--primary);
             border-radius: 15px;
-            border: none;
-            margin: 0 auto;
-            padding: 10px 0;
-            cursor: pointer;
-            transition: background 0.2s;
+            text-align: left;
+            align-content: center;
+            
+
+            p 
+            {
+                font-weight: 500;
+               font-size: min(3vw, 30px);
+                
+                margin-inline: auto;
+                margin-block: auto;
+                padding: min(3vw, 30px);
+
+            }
+
+            
         }
-    
-        .cv-download:hover {
-            background-color: var(--button-hover-bg);
-        }
-    
-    
-        .separator 
+
+        .div2 
         {
-            display: flex;
+            grid-row-start: 2;
+            margin: auto;
+
+            min-height: 55px;
+            height: 95%;
+
+            min-width: 110px;
+            width: 100%;
+            max-width: 100%;
+
+            background-color: var(--primary);
+            border-radius: 15px;
+
+            border-radius: 15px;
+            text-align: center;
+            align-content: center;
+
+            p 
+            {
+                font-weight: 500;
+                font-size: min(3vw, 30px);
+            
+                margin-inline: auto;
+                margin-block: auto;
+                padding: min(3vw, 30px);
+            }
+
+            .mainDivInfo 
+            {
+                text-align: left;
+            }
+
+            .listado-lenguajes {
+                text-align: left;
+            }
+
+        }
+
+        .div3 
+        {
+            grid-row-start: 3;
+            grid-column: auto;
+            margin: auto;
+
+            min-height: 55px;
+            max-width: 97%;
+            background-color: var(--primary);
+            border-radius: 15px;
+            text-align: center;
             align-items: center;
-            width: 100%;
-            margin: 12px 0;
-    
-    
-            .line 
+
+            img 
             {
-                flex: 1;
-                /* 5. Hace que la línea ocupe todo el espacio posible */
-                height: 2px;
-                /* 6. Grosor de la línea */
-                background: #fff;
-                opacity: 0.8;
-                /* 8. Un poco de transparencia */
-            }
-    
-            .separator-text 
-            {
-                color: #fff;
-                font-size: 1.5rem;
-                font-weight: bold;
-                margin: 0 24px;
-                text-align: center;
+                margin-top: 30px;
+                width: 100%;
             }
         }
 
-        .appSeparator
+        .div4 
         {
-            min-height: 230px;
-        }
-    
-}
+            grid-row-start: 3;
+            grid-column: auto;
+            margin: auto;
 
-@media (min-width:673px) and (max-width:881px)
-{
-   .contenedorGrid
-   {
-
-        top: 10dvh;
-        left: 6vw;
-
-        height: 65dvh;
-        width: 95vw;
-        margin: auto;
-
-        .section1
-        {
-            height: 55dvh;
-            max-width: 180px;
-            .intro
-            {
-                h2
-                {
-                    max-width: 180px;
-                }
-            }
-            .profile
-            {
-                margin-top: 5dvh;
-                max-width: 180px;
-                
-                .pfPicture
-                {
-                    width: 100%;
-                }
-
-                .githubButton
-                {
-                    right: 2%;
-                    bottom: 0%;
-                    max-width: 10vw;
-                    width: 95%;
-                    max-height: 15.2vh;
-
-                    max-width: 55px;
-                    max-height: 55px;
-                    aspect-ratio: 1 / 1;
-                }
-            }
-            .skills
-            {
-                margin-top: 5dvh;
-                bottom: 1.85dvh;
-                max-height: 144px;
-            }
-        }
-
-        .figYellow
-        {
-            top: 0dvh;
-            left: 22vw;
             
-            max-height: 200px;
-            
-            .app1
-            {
-                width: 60%;
+            min-height: 55px;
+            max-width: 97%;
+            background-color: var(--primary);
+            border-radius: 15px;
+            text-align: center;
+            justify-content: center;
+
+
+            img {
+                margin-top: 35px;
+                width: 97%;
+
             }
         }
 
-        .figPurple
+        .div5 
         {
-            width: 70%;
-            bottom: -2dvh;
-            left: 22vw;
-            .app2
-            {
-                width: 80%;
-            }
 
-        }
+            grid-column-start: 2;
+            grid-row-start: 4;
+            margin: auto;
 
-        .figRed
-        {
-            top: -20%;
-            right: 6vw;
-            width: 100%;
-            height: 67.07vh;
-            max-height: 500px;
-            max-width: 47.70vw;
-            .app3 {
-                    width: 70%;
-                }
-           
-        }
-
-        .cvDownload
-        {
-            top: 0vw;
-            right: 13vw;
-        }
-   } 
-
-   .abautMe-div
-   {
-    .conte-AboutMe
-    {
-        .aboutMe-info 
-        {
-            height: fit-content;
+            min-height: 55px;
+            height: 95%;
         
-            h3 {}
-    
-            p {
-                font-size: 12px;
-                font-weight: 600;
-            }
-        }
+            min-width: 110px;
+            width: 100%;
+            max-width: 100%;
 
-        .aboutMe-display
-        {
-            .rect1
-            {
-                max-height: 100px;
-                display: flex;
-                justify-content: center;
-                align-items: end;
+            background-color: var(--primary);
+            border-radius: 15px;
+            text-align: center;
+
+            align-items: center;
+
+            p{
                 
-                img 
-                {
-                    width: 90%;
-                    height: 90%;
-                    object-fit:cover;
-                }
+                font-weight: 500;
+                font-size: min(3vw, 30px);
+            
+                margin-inline: auto;
+                margin-block: auto;
+                padding: min(3vw, 30px);
             }
-            .rect2
+
+            .mainDivInfo
             {
-                top: 5%;
-                right: 3.5%;
-                
-                width: 45%;
                 text-align: left;
-                p
-                {
-                    padding: 5%;
-                    font-weight: 400;
-                    font-size: 5px;
-                }
             }
-            
-            .rect3
-            {
-                width: 45%;
+
+            .listado-lenguajes {
                 text-align: left;
-
-                bottom:2.5%;
-                left: 5.5%;
-                
-                    p 
-                    {
-                        padding: 5%;
-                        font-weight: 400;
-                        font-size: 1px;
-                    }
-            }
-            .rect4
-            {
-              
-                display: flex;
-                justify-content: center;
-                align-items: end;
-            
-                img 
-                {
-                    width: 90%;
-                    object-fit: cover;
-                }
             }
         }
     }
+.dev-Apps 
+{
     
-   }
-
-   .spacer{}
-
-   .apps
-   {
-    .conte-div
-    {
-        .div-img
-        {
-            width: 90%;
-            margin-right: 20px;
-            .ref-button
-            {
-                width: 110px;
-                height: 110px;
-
-                bottom: -3.5%;
-                left: 63%;
-            }
-        }
-
-        .div-texto
-        {
-            
-            .titulo
-            {
-                color: #353535;
-                font-size: 24px;
-            }
-
-            .conte-info
-            {
-                color: #353535;
-                font-size: 12px;
-            }
-        }
-    }
-   }
+    margin-top: 70px;
+    margin-bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
 }
 
-@media (min-width:882px) and (max-width:1024px) 
+.dev-Apps>.app1,
+.dev-Apps>.app2,
+.dev-Apps>.app3,
+.dev-Apps>.app4, 
+.dev-Apps>.app5,
+.dev-Apps>.app6
 {
-    .contenedorGrid 
-    {
-        top: 14dvh;
-        left: 2vw;
-
-        height: 85dvh;
-        width: 95vw;
-        margin: auto;
-
-        .section1 
-        {
-            height: 65dvh;
-            max-width: 300px;
-
-            .intro 
-            {
-                h2 
-                {
-                    max-width: 280px;
-                    font-size: clamp(24px,1.5rem,50px);
-                }
-            }
-
-            .profile 
-            {
-                margin-top: 5dvh;
-                max-width: 280px;
-
-                .pfPicture 
-                {
-                    width: 100%;
-                }
-
-                .githubButton 
-                {
-                    right: 2%;
-                    bottom: 0%;
-                    max-width: 10vw;
-                    width: 95%;
-                    max-height: 15.2vh;
-
-                    max-width: 80px;
-                    max-height: 80px;
-                    aspect-ratio: 1 / 1;
-                }
-            }
-
-            .skills 
-            {
-                margin-top: 5dvh;
-                bottom: -0.5dvh;
-                max-height: 144px;
-            }
-        }
-
-        .figYellow 
-        {
-            top: 0dvh;
-            left: 28vw;
-
-            max-height: 27dvh;
-
-            .app1 
-            {
-                width: 60%;
-            }
-        }
-
-        .figPurple 
-        {
-            width: 85%;
-            bottom: 14dvh;
-            left: 21%;
-
-            .app2 
-            {
-                object-fit: scale-down;
-                border-radius: 25px;
-                
-            }
-
-        }
-
-        .figRed 
-        {
-            top: -9.5%;
-            right: 0vw;
-            width: 80%;
-            height: 67.07vh;
-            max-height: 500px;
-            max-width: 47.70vw;
-
-            .app3 
-            {
-                width: 70%;
-            }
-
-        }
-
-        .cvDownload 
-        {
-            top: 2.4vw;
-            right: 7vw;
-        }
-    }
-
-    .abautMe-div 
-    {
-        .conte-AboutMe 
-        {
-            .aboutMe-info 
-            {
-                height: fit-content;
-
-                h3 
-                {
-                   font-size: clamp(33px,2.5rem,3rem);
-                }
-
-                p
-                {
-                    font-size:clamp(15px, 0.80rem, 1rem);
-                    font-weight: 500;
-                }
-            }
-
-            .aboutMe-display 
-            {
-                .rect1 
-                {
-                    top: 15%;
-                    max-height: 200px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-
-                    img 
-                    {
-                        width: 90%;
-                        max-height: 90%;
-                        object-fit: cover;
-                    }
-                }
-
-                .rect2 
-                {
-                    top: 5%;
-                    right: 3.5%;
-
-                    width: 45%;
-                    text-align: left;
-
-                    p {
-                        padding:10%;
-                        font-weight: 400;
-                        font-size: 15px;
-                    }
-                }
-
-                .rect3 
-                {
-                    width: 45%;
-                    text-align: left;
-
-                    bottom: 2.5%;
-                    left: 5.5%;
-
-                    p {
-                        padding: 10%;
-                        font-weight: 400;
-                        font-size: 15px;
-                    }
-                }
-
-                .rect4 
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-                    bottom:  25%;
-
-                    img {
-                        width: 90%;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-
-    }
-
-    .apps 
-    {
-        .conte-div 
-        {
-            .div-img 
-            {
-                width: 90%;
-                margin-right: 20px;
-
-                .ref-button 
-                {
-                    width: 110px;
-                    height: 110px;
-
-                    bottom: -4%;
-                    left: 61.5%;
-                }
-            }
-
-            .div-texto 
-            {
-                .titulo 
-                {
-                    color: #353535;
-                    font-size: 34px;
-                }
-
-                .conte-info 
-                {
-                    color: #353535;
-                    font-size: 17px;
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width:1025px) and (max-width:1440px) 
-{
-    .contenedorGrid 
-    {
-        top: 7dvh;
-        left: 1vw;
-
-        height: 65dvh;
-        width: 95vw;
-        margin: auto;
-
-        .section1 
-        {
-
-            left: 10vw;
-            height: 75dvh;
-            max-width: 400px;
-
-            .intro 
-            {
-                h2 
-                {
-                    max-width: 380px;
-                    font-size: clamp(2rem,40px,3rem);
-                }
-            }
-
-            .profile 
-            {
-                margin-top: 7dvh;
-                max-width: 300px;
-
-                .pfPicture 
-                {
-                    width: 100%;
-                }
-
-                .githubButton 
-                {
-                    right: 2%;
-                    bottom: 0%;
-                    max-width: 10vw;
-                    width: 95%;
-                    max-height: 15.2vh;
-
-                    max-width: 95px;
-                    max-height: 95px;
-                    aspect-ratio: 1 / 1;
-                }
-            }
-
-            .skills 
-            {
-                max-width: 300px;
-                bottom: 3dvh;
-                max-height: 144px;
-            }
-        }
-
-        .figYellow 
-        {
-
-            top: 3dvh;
-            left: 27vw;
-
-            max-height: 32dvh;
-
-            .app1 
-            {
-                width: 60%;
-            }
-        }
-
-        .figPurple 
-        {
-            width: 80%;
-            bottom: -15dvh;
-            left: 28vw;
-
-            max-width: 832.938px;
-
-            .app2 
-            {
-                width: 70%;
-                height: auto;
-                object-fit: cover;
-            }
-
-        }
-
-        .figRed 
-        {
-            pointer-events: none;
-            max-width: 55%;
-            max-width: 572.641px;
-
-            top: -11%;
-
-            left: 45vw;
-        
-            .app3 
-            {
-                width: 70%;
-                height: auto;
-                object-fit: cover;
-            }
-
-        }
-
-        .cvDownload 
-        {
-            top: 2vw;
-            right: 15.5vw;
-        }
-    }
-
-    .abautMe-div 
-    {
-        .conte-AboutMe 
-        {
-            .aboutMe-info 
-            {
-                height: fit-content;
-
-                h3 
-                {
-                    font-size: 50px;
-                }
-
-                p {
-                    font-size: 19px;
-                    font-weight: 500;
-                }
-            }
-
-            .aboutMe-display 
-            {
-                .rect1 
-                {
-                    top:14%;
-                    max-height: 200px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-
-                    img 
-                    {
-                        width: 90%;
-                        height: 90%;
-                        object-fit: cover;
-                    }
-                }
-
-                .rect2 
-                {
-                    top: 5%;
-                    right: 3.5%;
-
-                    width: 45%;
-                    text-align: left;
-
-                    p 
-                    {
-                        padding: 10%;
-                        font-weight: 400;
-                        font-size: 18px;
-                    }
-                }
-
-                .rect3 
-                {
-                    width: 45%;
-                    text-align: left;
-
-                    bottom: 4%;
-                    left: 5.5%;
-
-                    p 
-                    {
-                        padding: 10%;
-                        font-weight: 400;
-                        font-size: 18px;
-                    }
-                }
-
-                .rect4 
-                {
-                    bottom: 20%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-
-                    img {
-                        width: 90%;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-
-    }
-
-    .apps 
-    {
-        .conte-div 
-        {
-            .div-img 
-            {
-                width: 90%;
-                margin-right: 20px;
-
-                .ref-button 
-                {
-                    width: 110px;
-                    height: 110px;
-
-                    bottom: -4%;
-                    left: 61.7%;
-                }
-            }
-
-            .div-texto 
-            {
-
-                .titulo 
-                {
-                    color: #353535;
-                    font-size: 34px;
-                }
-
-                .conte-info 
-                {
-                    color: #353535;
-                    font-size: 20px;
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-}
-
-
-
-@media (min-width:1441px) and (max-width:1999px)
-{
-    .contenedorGrid 
-    {
-        top: 4dvh;
-        left: 5vw;
+    position: relative;
+    width: 378px;
+    max-width: 100%;
     
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+/* Imágenes dentro de cada app */
+/* Recuerda que para que las imagenes se vean bien deben de ser de 337 de ancho por 378 de alto */
+.image-App,
+.image-AppAlt
+{
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+
+    mask-image: url("images/App_der.png");
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: 1s;
+}
+
+.image-AppAlt
+{
+    mask-image: url("images/App_izq.png");
+}
+
+
+.button-arrowLeft
+{
+    position: absolute;
+    bottom: -5px;
+    left: 47px;
+}
+
+.button-arrowRight
+{
+    position: absolute;
+    bottom: -5px;
+    right: 47px;    
+}
+
+
+}
+
+.button-arrowLeft,
+.button-arrowRight
+{
+    background: var(--primary);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: background 0.2s;
+    z-index: 2;
+    text-decoration: none;
+}
+
+.button-arrowLeft,
+.button-arrowRight
+{
+    background-color: var(--button-hover-bg);
+}
+
+.cv-download 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 220px;
+    max-height: 55px;
+    background-color: var(--primary);
+    border-radius: 15px;
+    border: none;
+    margin: 0 auto;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cv-download:hover 
+{
+    background-color: var(--button-hover-bg);
+}
+
+
+.separator 
+{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 12px 0;
+
+
+    .line 
+    {
+        flex: 1; /* 5. Hace que la línea ocupe todo el espacio posible */
+        height: 2px;        /* 6. Grosor de la línea */
+        background: #fff;
+        opacity: 0.8;/* 8. Un poco de transparencia */
+    }
+
+    .separator-text 
+    {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0 24px;
+        text-align: center;
+    }
+}
+
+.appSeparator
+{
+    min-height: 230px;
+}
+
+
+@media screen and (min-width: 760px)
+{
+    .separator 
+    {
+
        
-        height: 95dvh;
-        width: 90vw;
-        margin: auto;
-    
-    
-    
-            .section1 
-            {
-                width: 90%;
-                max-width: 33.2vw;
-                height: 90vh;
-    
-               
-                .intro 
-                {
-                    width: 90%;
-                    max-width: 33.2vw;
-                    max-height: 8.943vh;
-    
-                    h2 
-                    {
-                        font-size: clamp(25px, 2vw, 3vw);
-                    }
-    
-                }
-    
-                .profile 
-                {
-                    position: absolute;
-                    top: 10.16dvh;
-    
-                    width: 95%;
-                    max-width: 33.2vw;
-                    max-height: 51.544vh;
-                    aspect-ratio: 0.828;
-                }
-    
-                .skills 
-                {
-                    position: absolute;
-                    bottom: 0;
-    
-    
-                    background-color: var(--primary);
-                    width: 90%;
-                    max-width: 355.75px;
-                    height: 26.42vh;
-                    border-radius: 2vh;
-                    aspect-ratio: 1.8;
-    
-                    font-size: clamp(25px, 2vw, 3vw);
-                    font-weight: 600;
-    
-                }
-            }
-    
-    
-    
-            .figYellow 
-            {
-                z-index: 5;
-                pointer-events: none;
-                position: absolute;
-                top: 3vh;
-                left: 23vw;
-                width: 90%;
-                height: 42vh;
-                max-width: 31vw;
-                max-height: 400px;
-    
-    
-                .app1 
-                {
-                    pointer-events: auto;
-                    width: 60%;
-                    height: 90%;
-                    object-fit: cover;
-                    border-radius: 15px;
-                }
-            }
-    
-            .figPurple 
-            {
-               
-                pointer-events: none;
+        width: 80%;
+       
+        .line 
+        {
+            height: 3.5px;
+        }
 
-                position: absolute;
-                bottom: 0dvh;
-                left: 23.5vw;
+        .separator-text 
+        {
+            font-size: min(3vw, 40px);
+        }
+    }
 
-                width: 80%;
-                max-width: 1100px;
+    .greeting 
+    {
+        font-size: 2em;
+        min-width: 720px;
+    }
 
-    
-                .app2 
-                {
-                    pointer-events: auto;
-                    width: 70%;
-                    height: auto;
-                    object-fit: scale-down;
-                }               
-            }
-    
-    
-            .figRed 
-            {
-                z-index: 3;
-                pointer-events: none;
-                max-width: 55%;
-                max-width: 730px;
+    .parent
+    {
+        max-width: 900px;
+       
+        
 
-                top: -0%;
-                left: 40vw; 
-
-                .app3 
-                {
-                    pointer-events: auto;
-                    width: 70%;
-                    height: auto;
-                    object-fit: cover;
-                }
-    
-            }
-
-            .cvDownload 
-            {
-                top: 2.7vw;
-                right: 15vw;
-
-                max-height: 150px;
-                max-width: 150px;
-            }
-    
-    
-    
-    
+        .div1
+        {
+            min-width: 800px;
            
-    
-    }   
-
-        .abautMe-div 
-        {
-            .conte-AboutMe 
-            {
-                .aboutMe-info 
-                {
-                    height: fit-content;
-    
-                    h3 {
-                        font-size: clamp(33px, 2.5rem, 3rem);
-                    }
-    
-                    p {
-                        font-size: clamp(15px, 0.80rem, 1rem);
-                        font-weight: 500;
-                    }
-                }
-    
-                .aboutMe-display 
-                {
-                    .rect1 {
-                        top: 15%;
-                        max-height: 200px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: end;
-    
-                        img {
-                            width: 90%;
-                            max-height: 90%;
-                            object-fit: cover;
-                        }
-                    }
-    
-                    .rect2 {
-                        top: 5%;
-                        right: 3.5%;
-    
-                        width: 45%;
-                        text-align: left;
-    
-                        p {
-                            padding: 10%;
-                            font-weight: 400;
-                            font-size: 15px;
-                        }
-                    }
-    
-                    .rect3 {
-                        width: 45%;
-                        text-align: left;
-    
-                        bottom: 2.5%;
-                        left: 5.5%;
-    
-                        p {
-                            padding: 10%;
-                            font-weight: 400;
-                            font-size: 15px;
-                        }
-                    }
-    
-                    .rect4 {
-                        display: flex;
-                        justify-content: center;
-                        align-items: end;
-                        bottom: 25%;
-    
-                        img {
-                            width: 90%;
-                            object-fit: cover;
-                        }
-                    }
-                }
-            }
-    
+         p{
+            font-weight: 400;
+         }
         }
-    
-        .apps 
-        {
-            .conte-div 
-            {
-                .div-img 
-                {
-                    width: 90%;
-                    height: 500px;
-                    margin-right: 20px;
-                    
-                    img
-                    {
-                        height: 100%;
-                        width: auto;
-                    }
 
-                    .ref-button 
-                    {
-                        width: 110px;
-                        height: 110px;
-    
-                        bottom: -4%;
-                        left: 61.5%;
-                    }
-                }
-    
-                .div-texto 
-                {
-                    .titulo 
-                    {
-                        color: #353535;
-                        font-size: 34px;
-                    }
-    
-                    .conte-info 
-                    {
-                        color: #353535;
-                        font-size: 17px;
-                        font-weight: 500;
-                    }
-                }
+        
+        .div2 
+        {
+            min-width: 800px;
+           
+
+            p 
+            {
+                font-weight: 400;
             }
         }
+
+        .div5 
+        {
+            min-width: 800px;
+           
+
+            p {
+                font-weight: 400;
+            }
+        }
+    }
 }
 
 
-@media screen and (min-width: 2000px) 
+@media (max-width: 800px) 
 {
-    .contenedorGrid 
+    .dev-Apps 
     {
-        top: 4dvh;
-        left: 10vw;
-
-
-        height: 95dvh;
-        width: 90vw;
-        margin: auto;
-
-
-
-        .section1 
+        justify-content: center;
+        
+        >.app1, .app2, .app3, .app4
         {
-            width: 90%;
-            max-width: 33.2vw;
-            height: 90dvh;
-
-
-            .intro {
-                width: 90%;
-                max-width: 33.2vw;
-                max-height: 8.943dvh;
-
-                h2 {
-                    font-size: clamp(25px, 2vw, 3vw);
-                }
-
-            }
-
-            .profile 
-            {
-                position: absolute;
-                top: 10.16dvh;
-
-                width: 95%;
-                max-width: 33.2vw;
-                max-height: 51.544vh;
-                aspect-ratio: 0.828;
-            }
-
-            .skills 
-            {
-                position: absolute;
-                bottom: 0;
-
-
-                background-color: var(--primary);
-                width: 90%;
-                max-width: 403.438px;
-                height: 26.42vh;
-                border-radius: 2vh;
-                aspect-ratio: 1.8;
-
-                font-size: clamp(25px, 2vw, 3vw);
-                font-weight: 600;
-
-            }
-        }
-
-
-
-        .figYellow 
-        {
-            z-index: 5;
-            pointer-events: none;
-            position: absolute;
-            top: 3vh;
-            left: 23vw;
-            width: 90%;
-            height: 42vh;
-            max-width: 31vw;
-            max-height: 500px;
-
-
-            .app1 
-            {
-                pointer-events: auto;
-                width: 60%;
-                height: 90%;
-                object-fit: cover;
-                border-radius: 15px;
-            }
-        }
-
-        .figPurple 
-        {
-            pointer-events: none;
-
-            position: absolute;
-            bottom: 0dvh;
-            left: 22dvw;
-
-            width: 80dvw;
-            max-width: 1400px;
-
-
-            .app2 
-            {
-                pointer-events: auto;
-                width: 70%;
-                height: auto;
-                object-fit: scale-down;
-            }
-        }
-
-
-        .figRed 
-        {
-            z-index: 3;
-            pointer-events: none;
-            max-width: 55%;
-            max-width: 900px;
-
-            top: -0%;
-            left: 41vw;
-
-            .app3 {
-                pointer-events: auto;
-                width: 70%;
-                height: auto;
-                object-fit: cover;
-            }
-
-        }
-
-        .cvDownload 
-        {
-            top: 3.3dvh;
-            right: 12dvw;
-
-            max-height: 200px;
-            max-width: 200px;
-        }
+            width: 100%;
+            max-width: 300px;
+              
+        }           
     }
-
-    .abautMe-div 
-    {
-        .conte-AboutMe 
-        {
-            .aboutMe-info 
-            {
-                height: fit-content;
-
-                h3 {
-                    font-size: clamp(45px, 3.5rem, 5rem);
-                }
-
-                p {
-                    font-size: clamp(25px, 1.5rem, 3rem);
-                    font-weight: 500;
-                }
-            }
-
-            .aboutMe-display {
-                .rect1 {
-                    top: 10%;
-                    max-height: 350px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-
-                    img {
-                        width: 90%;
-                        max-height: 90%;
-                        object-fit: cover;
-                    }
-                }
-
-                .rect2 
-                {
-                    top: 3%;
-                    right: 4%;
-
-                    width: 45%;
-                    text-align: left;
-
-                    p {
-                        padding: 10%;
-                        font-weight: 400;
-                        font-size: 28px;
-                    }
-                }
-
-                .rect3 
-                {
-                    width: 45%;
-                    text-align: left;
-
-                    bottom: 1%;
-                    left: 5%;
-
-                    p {
-                        padding: 10%;
-                        font-weight: 400;
-                        font-size: 28px;
-                    }
-                }
-
-                .rect4 
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: end;
-                    bottom: 10%;
-                    max-height: 350px;
-
-                    img {
-                        width: 90%;
-                        object-fit: cover;
-                    }
-                }
-            }
-        }
-
-    }
-    
-    .apps 
-    {
-        .conte-div 
-        {
-            .div-img 
-            {
-                img
-                {
-                    max-height: 600px;
-                    height: 90%;
-                    width: auto;
-                    object-fit: cover;
-                }
-
-                .ref-button 
-                {
-                    width: 140px;
-                    height: 140px;
-
-                    bottom: -1%;
-                    left: 59%;
-                }
-            }
-
-            .div-texto 
-            {
-                
-                .titulo 
-                {
-                    color: #353535;
-                    font-size: clamp(45px, 3.5rem, 5rem);
-                }
-
-                .conte-info 
-                {
-                    color: #353535;
-                    font-size: clamp(25px, 1.5rem, 3rem);
-                    font-weight: 500;
-                }
-            }
-        }
-    }
-                 
 }
