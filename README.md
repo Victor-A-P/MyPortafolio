@@ -13,8 +13,7 @@ The site is live on GitHub Pages and includes a skills section and a gallery of 
 - [Technologies Used](#technologies-used)
 - [Project Structure](#project-structure)
 - [Status and Maintenance](#status-and-maintenance)
-- [Contact](#contact)
-
+  
 ---
 
 ## Main Features
